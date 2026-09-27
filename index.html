@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>How Much of an Average MU Student Are You?</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="site">
+
+  <!-- =========================================
+       INTRO
+  ========================================== -->
+
+  <section id="intro" class="screen intro-screen">
+
+    <div class="intro-content">
+
+      <h1>
+        HOW MUCH OF AN<br>
+        AVERAGE MU STUDENT<br>
+        ARE YOU?
+      </h1>
+
+      <div class="intro-divider"></div>
+
+      <p class="methodology">
+        A survey was conducted among <strong>17 MU students</strong>
+        to understand their everyday spending habits.
+      </p>
+
+      <p class="intro-instruction">
+        Now let’s see how closely you match the responses in our sample.
+      </p>
+
+      <button class="primary-button" onclick="startQuiz()">
+        TAKE THE QUIZ <span>→</span>
+      </button>
+
+      <p class="intro-note">
+        *The findings represent this sample of 17 respondents, not all MU students.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       QUIZ
+  ========================================== -->
+
+  <section id="quiz" class="screen quiz-screen hidden">
+
+    <div class="quiz-header">
+
+      <div class="progress-track">
+        <div id="progress-bar"></div>
+      </div>
+
+    </div>
+
+    <div class="quiz-content">
+
+      <p class="quiz-instruction">
+        CHOOSE THE ANSWER THAT FEELS MOST LIKE YOU.
+      </p>
+
+      <h2 id="question-text"></h2>
+
+      <div id="answer-options" class="answer-options"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       RESULTS
+  ========================================== -->
+
+  <section id="results" class="screen results-screen hidden">
+
+    <div class="results-content">
+
+      <h1 class="results-heading">
+        YOUR RESULT
+      </h1>
+
+
+      <div class="result-type">
+
+        <p class="result-type-label">
+          YOUR SPENDING TYPE
+        </p>
+
+        <div class="result-type-box">
+
+          <div id="result-archetype" class="result-archetype">
+            THE SPENDER
+          </div>
+
+          <div id="result-quote" class="result-quote">
+            “Money, money, money, must be funny, in a rich man's world.”
+          </div>
+
+          <div id="result-source" class="result-source">
+            — ABBA
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="match-section">
+
+        <p class="match-heading">
+          MU MATCH
+        </p>
+
+        <div class="match-number" id="match-percentage">
+          75%
+        </div>
+
+        <p class="match-description" id="match-description">
+          3 out of 4 survey questions matched the most common response.
+        </p>
+
+      </div>
+
+
+      <div class="comparison-section">
+
+        <h2>
+          HOW DID YOU COMPARE?
+        </h2>
+
+        <div id="comparison-table-container"></div>
+
+      </div>
+
+
+      <button class="primary-button reveal-button" onclick="showData()">
+        REVEAL THE DATA <span>→</span>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       DATA
+  ========================================== -->
+
+  <section id="data" class="screen data-screen hidden">
+
+    <div class="data-content">
+
+      <h1 class="data-heading">
+        THE DATA
+      </h1>
+
+      <p class="data-intro">
+        Below is the data collected from our 17 respondents on their spending habits.
+      </p>
+
+
+      <!-- Q1 -->
+
+      <section class="data-question">
+
+        <div class="data-question-title">
+          WHAT DO STUDENTS SPEND MOST OF THEIR MONEY ON?
+        </div>
+
+        <p class="data-note">
+          Respondents were allowed to select more than one option.
+        </p>
+
+        <div class="q1-highlight">
+
+          <span class="highlight-number">
+            16 / 17
+          </span>
+
+          <span class="highlight-text">
+            students selected<br>
+            food / eating out
+          </span>
+
+        </div>
+
+
+        <div class="bar-chart q1-chart">
+
+          <div class="bar-row">
+            <div class="bar-label">FOOD / EATING OUT</div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:94.1%"></div>
+            </div>
+
+            <div class="bar-value">16</div>
+          </div>
+
+
+          <div class="bar-row">
+            <div class="bar-label">ENTERTAINMENT</div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:35.3%"></div>
+            </div>
+
+            <div class="bar-value">6</div>
+          </div>
+
+
+          <div class="bar-row">
+            <div class="bar-label">PERSONAL CARE</div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:35.3%"></div>
+            </div>
+
+            <div class="bar-value">6</div>
+          </div>
+
+
+          <div class="bar-row">
+            <div class="bar-label">SHOPPING</div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:29.4%"></div>
+            </div>
+
+            <div class="bar-value">5</div>
+          </div>
+
+
+          <div class="bar-row">
+            <div class="bar-label">TRANSPORT</div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:29.4%"></div>
+            </div>
+
+            <div class="bar-value">5</div>
+          </div>
+
+
+          <div class="bar-row">
+            <div class="bar-label">ACADEMICS</div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:17.6%"></div>
+            </div>
+
+            <div class="bar-value">3</div>
+          </div>
+
+
+          <div class="bar-row">
+            <div class="bar-label">OTHER</div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:5.9%"></div>
+            </div>
+
+            <div class="bar-value">1</div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- Q2 -->
+
+      <section class="data-question">
+
+        <div class="data-question-title">
+          HOW MUCH OF THEIR SPENDING GOES TOWARD THEIR MAIN EXPENSE?
+        </div>
+
+
+        <div class="vertical-chart">
+
+          <div class="vertical-column">
+
+            <div class="column-value">1</div>
+
+            <div class="column">
+              <div class="column-fill" style="height:14.3%"></div>
+            </div>
+
+            <div class="column-label">
+              &lt;20%
+            </div>
+
+          </div>
+
+
+          <div class="vertical-column">
+
+            <div class="column-value">2</div>
+
+            <div class="column">
+              <div class="column-fill" style="height:28.6%"></div>
+            </div>
+
+            <div class="column-label">
+              20–40%
+            </div>
+
+          </div>
+
+
+          <div class="vertical-column">
+
+            <div class="column-value">7</div>
+
+            <div class="column">
+              <div class="column-fill" style="height:100%"></div>
+            </div>
+
+            <div class="column-label">
+              40–60%
+            </div>
+
+          </div>
+
+
+          <div class="vertical-column">
+
+            <div class="column-value">7</div>
+
+            <div class="column">
+              <div class="column-fill" style="height:100%"></div>
+            </div>
+
+            <div class="column-label">
+              &gt;60%
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- Q3 -->
+
+      <section class="data-question">
+
+        <div class="data-question-title">
+          HOW OFTEN DO STUDENTS MAKE IMPULSE PURCHASES?
+        </div>
+
+
+        <div class="bar-chart">
+
+          <div class="bar-row">
+
+            <div class="bar-label">
+              NEVER
+            </div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:33.3%"></div>
+            </div>
+
+            <div class="bar-value">
+              11.8%
+            </div>
+
+          </div>
+
+
+          <div class="bar-row">
+
+            <div class="bar-label">
+              RARELY
+            </div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:100%"></div>
+            </div>
+
+            <div class="bar-value">
+              35.3%
+            </div>
+
+          </div>
+
+
+          <div class="bar-row">
+
+            <div class="bar-label">
+              SOMETIMES
+            </div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:83.3%"></div>
+            </div>
+
+            <div class="bar-value">
+              29.4%
+            </div>
+
+          </div>
+
+
+          <div class="bar-row">
+
+            <div class="bar-label">
+              OFTEN
+            </div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:33.3%"></div>
+            </div>
+
+            <div class="bar-value">
+              11.8%
+            </div>
+
+          </div>
+
+
+          <div class="bar-row">
+
+            <div class="bar-label">
+              VERY OFTEN
+            </div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:33.3%"></div>
+            </div>
+
+            <div class="bar-value">
+              11.8%
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- Q4 -->
+
+      <section class="data-question">
+
+        <div class="data-question-title">
+          WHAT WOULD STUDENTS DO WITH AN UNEXPECTED ₹1,000?
+        </div>
+
+
+        <div class="bar-chart q4-chart">
+
+          <div class="bar-row">
+
+            <div class="bar-label">
+              FOOD / EATING OUT
+            </div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:100%"></div>
+            </div>
+
+            <div class="bar-value">
+              35.3%
+            </div>
+
+          </div>
+
+
+          <div class="bar-row">
+
+            <div class="bar-label">
+              SAVE IT
+            </div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:100%"></div>
+            </div>
+
+            <div class="bar-value">
+              35.3%
+            </div>
+
+          </div>
+
+
+          <div class="bar-row">
+
+            <div class="bar-label">
+              SHOPPING
+            </div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:33.4%"></div>
+            </div>
+
+            <div class="bar-value">
+              11.8%
+            </div>
+
+          </div>
+
+
+          <div class="bar-row">
+
+            <div class="bar-label">
+              ENTERTAINMENT
+            </div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:33.4%"></div>
+            </div>
+
+            <div class="bar-value">
+              11.8%
+            </div>
+
+          </div>
+
+
+          <div class="bar-row">
+
+            <div class="bar-label">
+              OTHER
+            </div>
+
+            <div class="bar-track">
+              <div class="bar-fill" style="width:16.7%"></div>
+            </div>
+
+            <div class="bar-value">
+              5.9%
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- CONCLUSION -->
+
+      <section class="conclusion">
+
+        <h2>
+          WHAT DID WE LEARN?
+        </h2>
+
+        <p class="conclusion-text">
+          The 17 respondents helped us uncover some pretty clear patterns,
+          but their spending habits weren't exactly identical.
+        </p>
+
+        <p class="conclusion-text">
+          They differed in what they spent on, how much they spent,
+          and how often they made impulse purchases.
+        </p>
+
+        <p class="conclusion-text">
+          But there was one thing that brought them together like a
+          <strong class="hive-mind">hive mind:</strong>
+          <span class="food-word">FOOD.</span>
+        </p>
+
+        <p class="conclusion-final">
+          Apparently, some things are universal.
+        </p>
+
+      </section>
+
+    </div>
+
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
